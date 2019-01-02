@@ -1,0 +1,4 @@
+  function showLocationRatingButton(place) {
+    console.log(place.place_id);
+    document.getElementById("add-location-rating").style.display = "block";
+  }

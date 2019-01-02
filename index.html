@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>racism</title>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div style="height: 50%; width: 50%;">
+    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+    <div id="map"></div>
+    <div id="infowindow-content">
+      <span id="place-name" class="title"></span><br>
+      Place ID <span id="place-id"></span><br>
+      <span id="place-address"></span>
+    </div>
+  </div>
+
+
+    <div>
+        <button style="display: none;" id="add-location-rating">add a rating for this location</button>
+      </div>
+      <div style="display: none;" id="location-rating-input">
+        <label>On a scale of 1 to 10 Catzavelos how racist is this place? </label>
+        <span>
+          <input type="number" id="catzavelos" min="1" max="10"> Catzavelos.
+        </span>
+      </div>
+      <div id="reason-for-rating" style="display: none;">
+        <textarea rows="4" cols="50">
+          Please enter a brief description on incident that took place here.
+        </textarea>
+      </div>
+      <div style="display: none;" id="submit">
+        <button type="submit">
+          submit rating
+        </button>
+      </div>
+
+
+
+  <script src="maps-script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5jSFq5v1XFpKXkPnSNfwetgBdH-_NmKI&libraries=places"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5jSFq5v1XFpKXkPnSNfwetgBdH-_NmKI&libraries=places&callback=initMap"
+    async defer></script>
+</body>
+</body>
+
+
+</html>
