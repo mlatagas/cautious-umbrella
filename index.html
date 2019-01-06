@@ -5,47 +5,68 @@
   <title>racism</title>
   <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
   <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
+
+
 </head>
 
 <body>
-  <div style="height: 50%; width: 50%;">
-    <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
-    <div id="map"></div>
+  
+  <div >
     <div id="infowindow-content">
-      <span id="place-name" class="title"></span><br>
+      <span id="place-name" class="title"></span>
+      <br>
       Place ID <span id="place-id"></span><br>
       <span id="place-address"></span>
     </div>
   </div>
 
+  <div class="flex-container">
+      <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+      <div id="map" style="width: 50%; height: 50%; position:relative;"></div>
 
     <div>
-        <button style="display: none;" id="add-location-rating">add a rating for this location</button>
-      </div>
-      <div style="display: none;" id="location-rating-input">
-        <label>On a scale of 1 to 10 Catzavelos how racist is this place? </label>
-        <span>
-          <input type="number" id="catzavelos" min="1" max="10"> Catzavelos.
-        </span>
-      </div>
-      <div id="reason-for-rating" style="display: none;">
-        <textarea rows="4" cols="50">
-          Please enter a brief description on incident that took place here.
-        </textarea>
-      </div>
-      <div style="display: none;" id="submit">
-        <button type="submit">
-          submit rating
-        </button>
-      </div>
+      <button class="btn btn-primary" style="display: none;" id="add-location-rating">add a rating for this location</button>
+    </div>
+
+
+    <div style="display: none;" id="location-rating-input">
+      <label>On a scale of 1 to 10 Catzavelos how racist is this place? </label>
+      <span>
+        <input class="form-control" type="number" id="catzavelos" min="1" max="10"> Catzavelos.
+      </span>
+    </div>
+
+    <div id="reason-for-rating" style="display: none;">
+      <textarea class="form-control" rows="4" cols="50">Please enter a brief description on incident that took place here.</textarea>
+    </div>
+
+    <div style="display: none;" id="submit">
+      <button class="btn btn-primary" type="submit">
+        submit rating
+      </button>
+    </div>
+
+  </div>
+
+
+
+
+
 
 
 
   <script src="maps-script.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5jSFq5v1XFpKXkPnSNfwetgBdH-_NmKI&libraries=places"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5jSFq5v1XFpKXkPnSNfwetgBdH-_NmKI&libraries=places&callback=initMap"
     async defer></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
 </body>
 
